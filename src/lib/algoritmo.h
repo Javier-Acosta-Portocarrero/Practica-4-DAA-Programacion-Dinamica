@@ -3,9 +3,8 @@
 // Grado en Ingenieria Informatica
 // Asignatura: Diseño y Analisis de Algoritmos
 // Curso: 3º
-// Practica 3: Divide y Vencerás
+// Practica 4: Programación Dinámica
 // Autor: Javier Acosta Portocarrero
-// Autor: Gabriel Gallardo Noda
 // Fecha: 28/02/2024
 // Archivo algoritmo.h: fichero de declaración.
 // Contiene la declaración de la clase Algoritmo.
@@ -13,27 +12,8 @@
 #ifndef ALGORITMO_H_
 #define ALGORITMO_H_
 
-/**
-  * @class Instancia
-  * 
-  * @brief Clase abstracta interfaz de las instancias que reciben los algoritmos,
-  *        así siguiendo el patrón estrategia.  
-  */
-class Instancia {
- public:
-  virtual ~Instancia() = default;
-};
-
-/**
-  * @class Solucion
-  * 
-  * @brief Clase abstracta interfaz de las soluciones que generan los algoritmos,
-  *        así siguiendo el patrón estrategia.  
-  */
-class Solucion {
- public:
-  virtual ~Solucion() = default;
-};
+#include "instancia.h"
+#include "solucion.h"
 
 /**
   * @class Algoritmo

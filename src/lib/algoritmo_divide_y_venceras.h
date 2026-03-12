@@ -3,9 +3,8 @@
 // Grado en Ingenieria Informatica
 // Asignatura: Diseño y Analisis de Algoritmos
 // Curso: 3º
-// Practica 2: Máquina RAM
+// Practica 4: Programación Dinámica
 // Autor: Javier Acosta Portocarrero
-// Autor: Gabriel Gallardo Noda
 // Fecha: 28/02/2024
 // Archivo algoritmo_divide_y_venceras.h: fichero de declaración.
 // Contiene la declaración de la clase AlgoritmoDivideYVenceras.
@@ -14,6 +13,8 @@
 #define ALGORITMO_DIVIDE_Y_VENCERAS_H_
 
 #include "algoritmo.h"
+#include "instancia.h"
+#include "solucion.h"
 #include <vector>
 
 /**

@@ -3,9 +3,8 @@
 // Grado en Ingenieria Informatica
 // Asignatura: Diseño y Analisis de Algoritmos
 // Curso: 3º
-// Practica 2: Máquina RAM
+// Practica 4: Programación Dinámica
 // Autor: Javier Acosta Portocarrero
-// Autor: Gabriel Gallardo Noda
 // Fecha: 28/02/2024
 // Archivo algoritmo_divide_y_venceras.cc: fichero de definicion.
 // Contiene la definicion de la clase AlgoritmoDivideYVenceras.
