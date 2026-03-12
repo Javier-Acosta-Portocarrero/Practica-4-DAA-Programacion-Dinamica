@@ -17,6 +17,7 @@
 #include "planificacion_empleados/planificador_empleados.h"
 #include "planificacion_empleados/algoritmo_aproximado_planificacion.h"
 #include "planificacion_empleados/algoritmo_voraz_planificacion_dia.h"
+#include "planificacion_empleados/algoritmo_dinamico_planificacion_dia.h"
 #include <iostream>
 
 int main() {
@@ -27,7 +28,7 @@ int main() {
   CargaInstanciaPlanificacion* carga_instancias = new CargaInstanciaPlanificacionJson(ruta_fichero);
   InstanciaPlanificacionEmpleados* entrada = carga_instancias->Load();
 
-  Algoritmo* resuelve_casos_dia = new AlgoritmoVorazPlanificacionDia();
+  Algoritmo* resuelve_casos_dia = new AlgoritmoDinamicoPlanificacionDia();
   Algoritmo* estrategia_planificacion = new AlgoritmoAproximadoPlanificacion(resuelve_casos_dia);
   PlanificadorEmpleados planificador(estrategia_planificacion);
 

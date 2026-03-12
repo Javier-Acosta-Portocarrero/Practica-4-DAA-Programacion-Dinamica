@@ -20,7 +20,10 @@ class AlgoritmoDinamicoPlanificacionDia : public Algoritmo {
  public:
   Solucion* Solve(Instancia* entrada) override;
  private:
-  int EncontrarMejorEmpleadoDisponible(SolucionPlanificacionEmpleados* solucion, size_t dia, size_t turno);
+  std::vector<std::vector<int>> ConstruirTablaDinamica(SolucionPlanificacionEmpleados* const solucion);
+  unsigned EncontrarCantidadSlots(SolucionPlanificacionEmpleados* const  solucion);
+  unsigned TraducirSlotTurno(unsigned slot, SolucionPlanificacionEmpleados* const solucion);
+  void ReconstuirSolucion(const std::vector<std::vector<int>>& tabla, SolucionPlanificacionEmpleados* solucion);
 };
 
 #endif
