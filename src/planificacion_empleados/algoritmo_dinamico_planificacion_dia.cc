@@ -83,6 +83,9 @@ unsigned AlgoritmoDinamicoPlanificacionDia::TraducirSlotTurno(
     }
     acumulado_empleados += minimo_empleados;
   }
+  
+  // En caso de que el slot sea mayor al acumulado, se asigna al último turno
+  return cantidad_turnos - 1; 
 }
 
 void AlgoritmoDinamicoPlanificacionDia::ReconstuirSolucion(
@@ -94,7 +97,7 @@ void AlgoritmoDinamicoPlanificacionDia::ReconstuirSolucion(
   while (cantidad_empleados_actual > 0 && slot_actual > 0) {
     if (tabla[cantidad_empleados_actual][slot_actual] != tabla[cantidad_empleados_actual - 1][slot_actual]) {
       unsigned turno_slot = TraducirSlotTurno(slot_actual - 1, solucion);
-      solucion->NuevoTrabajoTurno(cantidad_empleados_actual - 1, 0, turno_slot);
+      solucion->NuevoTrabajoTurno(0, turno_slot, cantidad_empleados_actual - 1);
       --slot_actual;
     }
     --cantidad_empleados_actual;
