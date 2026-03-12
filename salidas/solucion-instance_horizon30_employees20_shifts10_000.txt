@@ -1,0 +1,691 @@
+Dia 0
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   O   O   O   O   X   O   O   O
+     Empleado 1   O   O   X   O   O   O   O   O   O   O
+     Empleado 2   O   O   O   O   O   O   O   O   O   O
+     Empleado 3   X   O   O   O   O   O   O   O   O   O
+     Empleado 4   X   O   O   O   O   O   O   O   O   O
+     Empleado 5   X   O   O   O   O   O   O   O   O   O
+     Empleado 6   O   O   O   X   O   O   O   O   O   O
+     Empleado 7   O   O   O   O   O   O   O   O   X   O
+     Empleado 8   O   O   O   O   O   O   O   O   X   O
+     Empleado 9   O   O   O   O   O   O   O   X   O   O
+    Empleado 10   O   X   O   O   O   O   O   O   O   O
+    Empleado 11   O   O   O   O   X   O   O   O   O   O
+    Empleado 12   O   O   O   O   O   O   O   X   O   O
+    Empleado 13   O   O   O   O   O   O   O   O   O   X
+    Empleado 14   O   O   O   X   O   O   O   O   O   O
+    Empleado 15   O   X   O   O   O   O   O   O   O   O
+    Empleado 16   O   O   O   O   O   X   O   O   O   O
+    Empleado 17   O   X   O   O   O   O   O   O   O   O
+    Empleado 18   O   O   O   O   O   O   O   O   O   X
+    Empleado 19   O   O   O   O   X   O   O   O   O   O
+
+Dia 1
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   O   O   O   O   O   X   O   O
+     Empleado 1   O   O   O   O   O   O   O   O   O   O
+     Empleado 2   O   O   O   O   O   X   O   O   O   O
+     Empleado 3   O   O   O   O   X   O   O   O   O   O
+     Empleado 4   O   O   X   O   O   O   O   O   O   O
+     Empleado 5   O   O   O   O   O   O   O   O   O   X
+     Empleado 6   O   X   O   O   O   O   O   O   O   O
+     Empleado 7   O   O   X   O   O   O   O   O   O   O
+     Empleado 8   O   O   O   O   O   O   O   O   X   O
+     Empleado 9   O   O   O   O   O   O   O   O   O   O
+    Empleado 10   X   O   O   O   O   O   O   O   O   O
+    Empleado 11   O   O   O   O   X   O   O   O   O   O
+    Empleado 12   O   O   O   O   X   O   O   O   O   O
+    Empleado 13   O   O   O   O   O   X   O   O   O   O
+    Empleado 14   O   O   O   O   O   X   O   O   O   O
+    Empleado 15   O   O   O   O   O   O   X   O   O   O
+    Empleado 16   X   O   O   O   O   O   O   O   O   O
+    Empleado 17   O   O   O   X   O   O   O   O   O   O
+    Empleado 18   O   X   O   O   O   O   O   O   O   O
+    Empleado 19   O   O   O   O   O   O   O   O   O   X
+
+Dia 2
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   O   O   X   O   O   O   O   O
+     Empleado 1   O   O   X   O   O   O   O   O   O   O
+     Empleado 2   O   O   X   O   O   O   O   O   O   O
+     Empleado 3   O   O   O   O   O   O   X   O   O   O
+     Empleado 4   O   X   O   O   O   O   O   O   O   O
+     Empleado 5   O   O   O   X   O   O   O   O   O   O
+     Empleado 6   O   O   O   X   O   O   O   O   O   O
+     Empleado 7   X   O   O   O   O   O   O   O   O   O
+     Empleado 8   O   O   O   O   O   O   O   X   O   O
+     Empleado 9   O   O   O   O   O   X   O   O   O   O
+    Empleado 10   O   X   O   O   O   O   O   O   O   O
+    Empleado 11   O   O   O   O   O   O   O   O   O   O
+    Empleado 12   O   O   O   O   O   O   O   O   X   O
+    Empleado 13   O   O   O   O   O   O   O   O   O   X
+    Empleado 14   O   O   O   O   O   O   O   O   O   X
+    Empleado 15   O   O   O   O   O   X   O   O   O   O
+    Empleado 16   O   O   O   O   O   O   O   O   O   O
+    Empleado 17   O   O   O   O   O   O   O   O   X   O
+    Empleado 18   O   O   O   O   O   O   X   O   O   O
+    Empleado 19   X   O   O   O   O   O   O   O   O   O
+
+Dia 3
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   O   O   O   O   O   O   O   O
+     Empleado 1   O   X   O   O   O   O   O   O   O   O
+     Empleado 2   O   O   X   O   O   O   O   O   O   O
+     Empleado 3   O   O   O   O   O   X   O   O   O   O
+     Empleado 4   X   O   O   O   O   O   O   O   O   O
+     Empleado 5   O   O   O   O   O   O   X   O   O   O
+     Empleado 6   O   X   O   O   O   O   O   O   O   O
+     Empleado 7   O   O   O   X   O   O   O   O   O   O
+     Empleado 8   O   O   O   O   O   O   O   X   O   O
+     Empleado 9   O   O   O   O   X   O   O   O   O   O
+    Empleado 10   O   O   O   O   O   O   O   O   X   O
+    Empleado 11   O   O   O   O   O   O   X   O   O   O
+    Empleado 12   O   O   O   O   X   O   O   O   O   O
+    Empleado 13   O   O   O   X   O   O   O   O   O   O
+    Empleado 14   O   O   O   O   O   O   O   O   O   X
+    Empleado 15   O   O   O   O   O   O   O   O   O   X
+    Empleado 16   X   O   O   O   O   O   O   O   O   O
+    Empleado 17   O   X   O   O   O   O   O   O   O   O
+    Empleado 18   O   O   O   O   O   O   O   O   X   O
+    Empleado 19   X   O   O   O   O   O   O   O   O   O
+
+Dia 4
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   X   O   O   O   O   O   O   O   O   O
+     Empleado 1   O   O   O   O   O   O   O   X   O   O
+     Empleado 2   O   O   X   O   O   O   O   O   O   O
+     Empleado 3   O   O   O   O   O   X   O   O   O   O
+     Empleado 4   O   O   O   O   O   O   O   O   X   O
+     Empleado 5   O   X   O   O   O   O   O   O   O   O
+     Empleado 6   O   O   O   X   O   O   O   O   O   O
+     Empleado 7   O   O   O   O   O   O   X   O   O   O
+     Empleado 8   O   X   O   O   O   O   O   O   O   O
+     Empleado 9   O   O   O   O   O   O   O   O   O   X
+    Empleado 10   O   O   X   O   O   O   O   O   O   O
+    Empleado 11   O   O   O   O   X   O   O   O   O   O
+    Empleado 12   O   O   O   O   O   O   X   O   O   O
+    Empleado 13   O   O   O   X   O   O   O   O   O   O
+    Empleado 14   X   O   O   O   O   O   O   O   O   O
+    Empleado 15   O   O   O   O   X   O   O   O   O   O
+    Empleado 16   O   O   O   O   O   O   O   O   O   O
+    Empleado 17   O   O   O   O   O   O   O   O   O   X
+    Empleado 18   O   O   O   X   O   O   O   O   O   O
+    Empleado 19   O   O   O   O   O   O   X   O   O   O
+
+Dia 5
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   O   O   X   O   O   O   O   O
+     Empleado 1   O   O   O   O   X   O   O   O   O   O
+     Empleado 2   O   O   O   O   O   O   X   O   O   O
+     Empleado 3   O   O   O   X   O   O   O   O   O   O
+     Empleado 4   O   X   O   O   O   O   O   O   O   O
+     Empleado 5   O   O   O   O   X   O   O   O   O   O
+     Empleado 6   O   X   O   O   O   O   O   O   O   O
+     Empleado 7   X   O   O   O   O   O   O   O   O   O
+     Empleado 8   O   O   O   O   O   O   O   X   O   O
+     Empleado 9   O   O   O   O   O   X   O   O   O   O
+    Empleado 10   O   O   X   O   O   O   O   O   O   O
+    Empleado 11   O   O   O   X   O   O   O   O   O   O
+    Empleado 12   O   O   X   O   O   O   O   O   O   O
+    Empleado 13   O   O   O   O   O   X   O   O   O   O
+    Empleado 14   X   O   O   O   O   O   O   O   O   O
+    Empleado 15   O   O   O   O   O   O   O   O   X   O
+    Empleado 16   O   O   O   O   O   O   O   O   O   X
+    Empleado 17   O   O   O   O   O   O   O   O   X   O
+    Empleado 18   O   X   O   O   O   O   O   O   O   O
+    Empleado 19   O   O   X   O   O   O   O   O   O   O
+
+Dia 6
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   X   O   O   O   O   O   O   O   O   O
+     Empleado 1   X   O   O   O   O   O   O   O   O   O
+     Empleado 2   O   O   O   O   O   O   X   O   O   O
+     Empleado 3   O   O   O   O   O   O   O   O   O   O
+     Empleado 4   O   O   O   O   O   O   O   O   X   O
+     Empleado 5   O   O   O   O   O   O   O   O   O   X
+     Empleado 6   O   X   O   O   O   O   O   O   O   O
+     Empleado 7   O   X   O   O   O   O   O   O   O   O
+     Empleado 8   O   O   O   O   O   X   O   O   O   O
+     Empleado 9   O   O   X   O   O   O   O   O   O   O
+    Empleado 10   O   O   O   X   O   O   O   O   O   O
+    Empleado 11   O   O   O   O   X   O   O   O   O   O
+    Empleado 12   O   O   O   O   O   O   O   O   O   O
+    Empleado 13   O   O   O   O   O   X   O   O   O   O
+    Empleado 14   O   O   O   O   O   O   O   X   O   O
+    Empleado 15   O   O   O   O   O   O   X   O   O   O
+    Empleado 16   X   O   O   O   O   O   O   O   O   O
+    Empleado 17   O   O   O   O   O   O   O   O   O   O
+    Empleado 18   O   O   O   O   O   O   O   O   O   O
+    Empleado 19   O   O   O   O   O   O   O   O   O   X
+
+Dia 7
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   O   O   O   X   O   O   O   O
+     Empleado 1   O   X   O   O   O   O   O   O   O   O
+     Empleado 2   O   O   O   X   O   O   O   O   O   O
+     Empleado 3   O   O   O   X   O   O   O   O   O   O
+     Empleado 4   O   O   X   O   O   O   O   O   O   O
+     Empleado 5   O   O   O   O   O   O   O   X   O   O
+     Empleado 6   O   O   X   O   O   O   O   O   O   O
+     Empleado 7   X   O   O   O   O   O   O   O   O   O
+     Empleado 8   O   O   O   O   X   O   O   O   O   O
+     Empleado 9   O   O   O   O   O   O   X   O   O   O
+    Empleado 10   O   O   O   X   O   O   O   O   O   O
+    Empleado 11   O   O   O   O   O   O   O   O   X   O
+    Empleado 12   O   O   O   O   O   O   O   O   O   X
+    Empleado 13   O   O   O   O   O   O   X   O   O   O
+    Empleado 14   O   O   O   O   O   O   O   X   O   O
+    Empleado 15   O   O   O   O   O   O   O   O   O   O
+    Empleado 16   O   X   O   O   O   O   O   O   O   O
+    Empleado 17   O   O   X   O   O   O   O   O   O   O
+    Empleado 18   X   O   O   O   O   O   O   O   O   O
+    Empleado 19   O   O   O   O   X   O   O   O   O   O
+
+Dia 8
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   X   O   O   O   O   O   O   O   O   O
+     Empleado 1   X   O   O   O   O   O   O   O   O   O
+     Empleado 2   O   O   O   O   X   O   O   O   O   O
+     Empleado 3   O   O   X   O   O   O   O   O   O   O
+     Empleado 4   O   X   O   O   O   O   O   O   O   O
+     Empleado 5   O   X   O   O   O   O   O   O   O   O
+     Empleado 6   O   O   O   O   X   O   O   O   O   O
+     Empleado 7   O   O   O   X   O   O   O   O   O   O
+     Empleado 8   X   O   O   O   O   O   O   O   O   O
+     Empleado 9   O   O   O   O   O   O   O   O   X   O
+    Empleado 10   O   O   O   O   O   O   O   X   O   O
+    Empleado 11   O   O   O   O   O   O   X   O   O   O
+    Empleado 12   O   O   O   O   O   X   O   O   O   O
+    Empleado 13   O   O   O   X   O   O   O   O   O   O
+    Empleado 14   O   O   O   O   O   O   X   O   O   O
+    Empleado 15   O   O   O   O   O   O   O   X   O   O
+    Empleado 16   O   O   O   O   O   O   O   O   O   X
+    Empleado 17   O   O   X   O   O   O   O   O   O   O
+    Empleado 18   O   O   O   O   O   O   O   O   X   O
+    Empleado 19   O   O   O   O   O   O   O   O   O   X
+
+Dia 9
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   O   O   O   O   X   O   O   O
+     Empleado 1   O   O   O   O   O   X   O   O   O   O
+     Empleado 2   O   X   O   O   O   O   O   O   O   O
+     Empleado 3   O   O   O   O   O   O   O   O   X   O
+     Empleado 4   X   O   O   O   O   O   O   O   O   O
+     Empleado 5   O   O   X   O   O   O   O   O   O   O
+     Empleado 6   O   O   O   O   X   O   O   O   O   O
+     Empleado 7   O   O   O   O   O   O   O   O   O   O
+     Empleado 8   O   O   O   O   O   O   O   O   X   O
+     Empleado 9   O   O   O   O   O   O   O   O   O   O
+    Empleado 10   X   O   O   O   O   O   O   O   O   O
+    Empleado 11   X   O   O   O   O   O   O   O   O   O
+    Empleado 12   O   O   O   O   X   O   O   O   O   O
+    Empleado 13   O   O   X   O   O   O   O   O   O   O
+    Empleado 14   O   O   O   O   X   O   O   O   O   O
+    Empleado 15   O   O   O   O   O   O   O   O   O   O
+    Empleado 16   O   X   O   O   O   O   O   O   O   O
+    Empleado 17   O   O   O   O   O   O   O   O   O   X
+    Empleado 18   O   O   O   O   O   O   O   X   O   O
+    Empleado 19   O   O   O   X   O   O   O   O   O   O
+
+Dia 10
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   O   X   O   O   O   O   O   O
+     Empleado 1   O   O   X   O   O   O   O   O   O   O
+     Empleado 2   O   O   O   O   O   O   O   X   O   O
+     Empleado 3   X   O   O   O   O   O   O   O   O   O
+     Empleado 4   X   O   O   O   O   O   O   O   O   O
+     Empleado 5   O   O   O   O   O   O   X   O   O   O
+     Empleado 6   O   O   O   X   O   O   O   O   O   O
+     Empleado 7   O   O   X   O   O   O   O   O   O   O
+     Empleado 8   X   O   O   O   O   O   O   O   O   O
+     Empleado 9   O   O   O   O   O   X   O   O   O   O
+    Empleado 10   O   O   O   O   X   O   O   O   O   O
+    Empleado 11   O   O   O   O   O   O   O   O   X   O
+    Empleado 12   O   X   O   O   O   O   O   O   O   O
+    Empleado 13   O   O   O   O   O   O   O   X   O   O
+    Empleado 14   O   O   O   O   O   O   O   O   O   O
+    Empleado 15   O   O   O   O   O   O   O   O   O   X
+    Empleado 16   O   O   X   O   O   O   O   O   O   O
+    Empleado 17   O   O   O   O   O   O   O   O   O   X
+    Empleado 18   O   X   O   O   O   O   O   O   O   O
+    Empleado 19   O   O   O   O   O   O   O   O   O   O
+
+Dia 11
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   X   O   O   O   O   O   O   O   O   O
+     Empleado 1   O   O   X   O   O   O   O   O   O   O
+     Empleado 2   X   O   O   O   O   O   O   O   O   O
+     Empleado 3   O   O   O   O   O   X   O   O   O   O
+     Empleado 4   O   O   O   O   O   O   O   O   X   O
+     Empleado 5   O   O   O   O   O   X   O   O   O   O
+     Empleado 6   O   O   O   O   O   O   O   O   X   O
+     Empleado 7   O   O   X   O   O   O   O   O   O   O
+     Empleado 8   O   O   O   X   O   O   O   O   O   O
+     Empleado 9   O   O   O   X   O   O   O   O   O   O
+    Empleado 10   O   X   O   O   O   O   O   O   O   O
+    Empleado 11   O   O   O   X   O   O   O   O   O   O
+    Empleado 12   O   O   O   O   X   O   O   O   O   O
+    Empleado 13   X   O   O   O   O   O   O   O   O   O
+    Empleado 14   O   O   O   O   O   O   O   O   O   O
+    Empleado 15   O   O   O   O   O   O   X   O   O   O
+    Empleado 16   O   O   O   O   O   O   O   O   O   X
+    Empleado 17   O   O   O   O   O   O   O   X   O   O
+    Empleado 18   O   O   O   O   O   O   X   O   O   O
+    Empleado 19   O   O   O   O   X   O   O   O   O   O
+
+Dia 12
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   O   O   O   O   O   O   O   O
+     Empleado 1   O   O   O   O   O   O   O   X   O   O
+     Empleado 2   O   O   X   O   O   O   O   O   O   O
+     Empleado 3   O   O   O   O   O   O   O   O   O   X
+     Empleado 4   O   O   X   O   O   O   O   O   O   O
+     Empleado 5   O   O   O   O   X   O   O   O   O   O
+     Empleado 6   O   O   O   X   O   O   O   O   O   O
+     Empleado 7   O   X   O   O   O   O   O   O   O   O
+     Empleado 8   O   O   O   O   O   O   O   O   X   O
+     Empleado 9   O   O   O   X   O   O   O   O   O   O
+    Empleado 10   O   O   O   O   O   O   X   O   O   O
+    Empleado 11   O   O   O   O   O   O   X   O   O   O
+    Empleado 12   O   O   O   O   X   O   O   O   O   O
+    Empleado 13   X   O   O   O   O   O   O   O   O   O
+    Empleado 14   O   O   O   O   O   O   O   O   X   O
+    Empleado 15   O   O   O   O   O   X   O   O   O   O
+    Empleado 16   X   O   O   O   O   O   O   O   O   O
+    Empleado 17   O   O   O   O   O   O   O   O   O   O
+    Empleado 18   O   X   O   O   O   O   O   O   O   O
+    Empleado 19   X   O   O   O   O   O   O   O   O   O
+
+Dia 13
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   X   O   O   O   O   O   O   O   O
+     Empleado 1   O   O   O   O   O   X   O   O   O   O
+     Empleado 2   O   O   O   O   O   O   X   O   O   O
+     Empleado 3   O   O   O   O   O   O   O   O   O   O
+     Empleado 4   O   O   O   O   O   O   O   O   O   O
+     Empleado 5   O   O   O   O   O   O   O   O   O   X
+     Empleado 6   X   O   O   O   O   O   O   O   O   O
+     Empleado 7   O   O   O   O   X   O   O   O   O   O
+     Empleado 8   O   O   X   O   O   O   O   O   O   O
+     Empleado 9   O   O   O   X   O   O   O   O   O   O
+    Empleado 10   O   O   O   O   O   O   O   O   O   O
+    Empleado 11   O   O   O   X   O   O   O   O   O   O
+    Empleado 12   O   O   O   O   O   O   X   O   O   O
+    Empleado 13   O   O   O   O   O   O   O   O   O   O
+    Empleado 14   O   O   O   O   O   O   O   O   O   O
+    Empleado 15   O   O   O   O   O   O   O   O   X   O
+    Empleado 16   O   O   O   O   O   X   O   O   O   O
+    Empleado 17   O   O   O   O   O   O   O   O   O   O
+    Empleado 18   O   O   X   O   O   O   O   O   O   O
+    Empleado 19   O   O   O   O   O   O   O   X   O   O
+
+Dia 14
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   O   O   O   O   O   X   O   O
+     Empleado 1   O   O   O   O   O   O   O   O   O   X
+     Empleado 2   O   O   O   X   O   O   O   O   O   O
+     Empleado 3   O   X   O   O   O   O   O   O   O   O
+     Empleado 4   O   O   O   X   O   O   O   O   O   O
+     Empleado 5   O   X   O   O   O   O   O   O   O   O
+     Empleado 6   O   O   O   O   O   O   O   O   O   O
+     Empleado 7   O   O   O   O   O   O   X   O   O   O
+     Empleado 8   O   O   O   O   O   X   O   O   O   O
+     Empleado 9   O   O   O   O   O   O   O   O   O   O
+    Empleado 10   O   O   X   O   O   O   O   O   O   O
+    Empleado 11   X   O   O   O   O   O   O   O   O   O
+    Empleado 12   O   O   O   O   X   O   O   O   O   O
+    Empleado 13   O   O   O   O   O   X   O   O   O   O
+    Empleado 14   O   O   X   O   O   O   O   O   O   O
+    Empleado 15   O   O   O   O   O   O   O   O   X   O
+    Empleado 16   O   O   O   O   O   O   O   O   O   X
+    Empleado 17   O   O   O   O   O   O   O   O   X   O
+    Empleado 18   O   O   O   O   O   O   O   O   O   O
+    Empleado 19   O   O   O   O   X   O   O   O   O   O
+
+Dia 15
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   X   O   O   O   O   O   O   O
+     Empleado 1   O   O   X   O   O   O   O   O   O   O
+     Empleado 2   X   O   O   O   O   O   O   O   O   O
+     Empleado 3   O   O   O   O   X   O   O   O   O   O
+     Empleado 4   O   O   O   O   O   O   O   O   O   O
+     Empleado 5   O   O   X   O   O   O   O   O   O   O
+     Empleado 6   O   O   O   O   O   O   X   O   O   O
+     Empleado 7   O   O   O   O   O   O   O   X   O   O
+     Empleado 8   X   O   O   O   O   O   O   O   O   O
+     Empleado 9   O   O   O   O   O   X   O   O   O   O
+    Empleado 10   O   O   O   O   O   O   X   O   O   O
+    Empleado 11   O   O   O   X   O   O   O   O   O   O
+    Empleado 12   O   O   O   O   O   O   O   O   O   X
+    Empleado 13   O   O   O   O   O   O   O   O   O   O
+    Empleado 14   O   O   O   O   O   O   O   O   O   O
+    Empleado 15   O   O   O   O   O   O   O   O   X   O
+    Empleado 16   O   O   O   X   O   O   O   O   O   O
+    Empleado 17   O   O   O   O   X   O   O   O   O   O
+    Empleado 18   O   X   O   O   O   O   O   O   O   O
+    Empleado 19   O   O   O   O   O   O   O   X   O   O
+
+Dia 16
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   X   O   O   O   O   O   O   O   O   O
+     Empleado 1   O   O   O   O   O   O   O   O   O   O
+     Empleado 2   O   O   O   X   O   O   O   O   O   O
+     Empleado 3   O   O   X   O   O   O   O   O   O   O
+     Empleado 4   O   O   O   O   O   O   O   O   O   O
+     Empleado 5   O   O   O   O   X   O   O   O   O   O
+     Empleado 6   O   X   O   O   O   O   O   O   O   O
+     Empleado 7   O   O   O   O   O   O   O   O   O   X
+     Empleado 8   O   X   O   O   O   O   O   O   O   O
+     Empleado 9   O   O   O   X   O   O   O   O   O   O
+    Empleado 10   O   O   O   O   O   O   O   X   O   O
+    Empleado 11   O   X   O   O   O   O   O   O   O   O
+    Empleado 12   O   O   O   O   O   O   X   O   O   O
+    Empleado 13   O   O   O   O   O   O   X   O   O   O
+    Empleado 14   X   O   O   O   O   O   O   O   O   O
+    Empleado 15   O   O   O   O   O   X   O   O   O   O
+    Empleado 16   O   O   O   O   O   O   O   O   X   O
+    Empleado 17   O   O   O   O   O   X   O   O   O   O
+    Empleado 18   O   O   X   O   O   O   O   O   O   O
+    Empleado 19   O   O   O   O   O   O   O   O   O   X
+
+Dia 17
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   X   O   O   O   O   O   O   O   O
+     Empleado 1   O   O   O   O   X   O   O   O   O   O
+     Empleado 2   O   O   X   O   O   O   O   O   O   O
+     Empleado 3   X   O   O   O   O   O   O   O   O   O
+     Empleado 4   O   X   O   O   O   O   O   O   O   O
+     Empleado 5   O   O   X   O   O   O   O   O   O   O
+     Empleado 6   O   O   O   X   O   O   O   O   O   O
+     Empleado 7   O   X   O   O   O   O   O   O   O   O
+     Empleado 8   O   O   O   O   O   X   O   O   O   O
+     Empleado 9   O   O   O   O   O   O   X   O   O   O
+    Empleado 10   O   O   O   O   O   O   O   O   X   O
+    Empleado 11   X   O   O   O   O   O   O   O   O   O
+    Empleado 12   O   O   O   O   X   O   O   O   O   O
+    Empleado 13   O   O   O   X   O   O   O   O   O   O
+    Empleado 14   O   O   O   O   X   O   O   O   O   O
+    Empleado 15   O   O   O   O   O   O   O   X   O   O
+    Empleado 16   O   O   X   O   O   O   O   O   O   O
+    Empleado 17   O   O   O   O   O   O   O   O   O   X
+    Empleado 18   O   O   O   O   O   X   O   O   O   O
+    Empleado 19   O   O   O   O   O   O   O   O   X   O
+
+Dia 18
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   O   X   O   O   O   O   O   O
+     Empleado 1   O   O   X   O   O   O   O   O   O   O
+     Empleado 2   O   O   O   O   O   O   O   O   O   X
+     Empleado 3   X   O   O   O   O   O   O   O   O   O
+     Empleado 4   O   O   O   O   O   X   O   O   O   O
+     Empleado 5   X   O   O   O   O   O   O   O   O   O
+     Empleado 6   O   O   O   O   O   O   O   O   O   O
+     Empleado 7   X   O   O   O   O   O   O   O   O   O
+     Empleado 8   O   X   O   O   O   O   O   O   O   O
+     Empleado 9   O   O   O   O   O   O   O   O   X   O
+    Empleado 10   O   X   O   O   O   O   O   O   O   O
+    Empleado 11   O   O   O   O   O   O   X   O   O   O
+    Empleado 12   O   O   O   O   X   O   O   O   O   O
+    Empleado 13   O   O   O   X   O   O   O   O   O   O
+    Empleado 14   O   O   O   X   O   O   O   O   O   O
+    Empleado 15   O   O   O   O   O   X   O   O   O   O
+    Empleado 16   O   O   O   O   O   O   O   X   O   O
+    Empleado 17   O   O   O   O   O   O   O   O   X   O
+    Empleado 18   O   O   O   O   X   O   O   O   O   O
+    Empleado 19   O   O   O   O   O   O   O   O   O   O
+
+Dia 19
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   O   X   O   O   O   O   O   O
+     Empleado 1   O   O   X   O   O   O   O   O   O   O
+     Empleado 2   O   X   O   O   O   O   O   O   O   O
+     Empleado 3   O   O   O   O   O   O   X   O   O   O
+     Empleado 4   O   X   O   O   O   O   O   O   O   O
+     Empleado 5   O   O   O   O   X   O   O   O   O   O
+     Empleado 6   O   O   O   O   X   O   O   O   O   O
+     Empleado 7   O   O   O   O   O   O   O   O   X   O
+     Empleado 8   O   O   O   O   O   X   O   O   O   O
+     Empleado 9   O   O   O   O   O   O   O   O   X   O
+    Empleado 10   X   O   O   O   O   O   O   O   O   O
+    Empleado 11   O   O   O   O   O   X   O   O   O   O
+    Empleado 12   O   O   O   O   O   O   X   O   O   O
+    Empleado 13   O   O   O   O   O   O   O   O   O   O
+    Empleado 14   O   O   O   O   O   O   O   X   O   O
+    Empleado 15   O   X   O   O   O   O   O   O   O   O
+    Empleado 16   O   O   O   O   O   O   O   O   O   X
+    Empleado 17   X   O   O   O   O   O   O   O   O   O
+    Empleado 18   O   O   O   O   O   O   O   O   O   X
+    Empleado 19   O   O   X   O   O   O   O   O   O   O
+
+Dia 20
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   O   O   O   X   O   O   O   O
+     Empleado 1   O   O   O   O   O   O   O   O   X   O
+     Empleado 2   X   O   O   O   O   O   O   O   O   O
+     Empleado 3   O   O   X   O   O   O   O   O   O   O
+     Empleado 4   O   O   O   O   X   O   O   O   O   O
+     Empleado 5   O   O   O   O   O   O   X   O   O   O
+     Empleado 6   O   X   O   O   O   O   O   O   O   O
+     Empleado 7   O   O   O   O   O   X   O   O   O   O
+     Empleado 8   O   O   X   O   O   O   O   O   O   O
+     Empleado 9   O   X   O   O   O   O   O   O   O   O
+    Empleado 10   O   O   O   O   O   O   O   X   O   O
+    Empleado 11   O   O   O   X   O   O   O   O   O   O
+    Empleado 12   X   O   O   O   O   O   O   O   O   O
+    Empleado 13   O   O   O   O   O   O   O   O   O   X
+    Empleado 14   O   O   O   X   O   O   O   O   O   O
+    Empleado 15   O   O   O   O   O   O   O   O   O   O
+    Empleado 16   O   O   O   O   O   O   O   X   O   O
+    Empleado 17   O   O   X   O   O   O   O   O   O   O
+    Empleado 18   O   O   O   O   O   O   O   O   O   O
+    Empleado 19   O   O   O   O   O   O   O   O   O   X
+
+Dia 21
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   O   O   X   O   O   O   O   O
+     Empleado 1   X   O   O   O   O   O   O   O   O   O
+     Empleado 2   O   O   O   O   O   O   O   O   O   X
+     Empleado 3   X   O   O   O   O   O   O   O   O   O
+     Empleado 4   X   O   O   O   O   O   O   O   O   O
+     Empleado 5   O   O   O   X   O   O   O   O   O   O
+     Empleado 6   O   O   O   O   O   O   O   X   O   O
+     Empleado 7   O   O   O   O   O   O   O   O   O   O
+     Empleado 8   O   O   O   X   O   O   O   O   O   O
+     Empleado 9   O   O   X   O   O   O   O   O   O   O
+    Empleado 10   O   O   O   O   O   O   O   O   X   O
+    Empleado 11   O   O   X   O   O   O   O   O   O   O
+    Empleado 12   O   O   O   O   O   X   O   O   O   O
+    Empleado 13   O   O   O   O   O   O   X   O   O   O
+    Empleado 14   O   O   O   O   O   O   X   O   O   O
+    Empleado 15   O   O   O   O   X   O   O   O   O   O
+    Empleado 16   O   O   X   O   O   O   O   O   O   O
+    Empleado 17   O   X   O   O   O   O   O   O   O   O
+    Empleado 18   O   X   O   O   O   O   O   O   O   O
+    Empleado 19   O   O   O   O   O   O   O   X   O   O
+
+Dia 22
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   X   O   O   O   O   O   O   O   O
+     Empleado 1   O   O   O   O   O   O   O   O   O   X
+     Empleado 2   O   O   O   O   O   X   O   O   O   O
+     Empleado 3   O   O   O   O   O   O   O   O   X   O
+     Empleado 4   O   O   O   O   O   O   O   X   O   O
+     Empleado 5   O   O   O   O   X   O   O   O   O   O
+     Empleado 6   O   O   X   O   O   O   O   O   O   O
+     Empleado 7   O   O   O   X   O   O   O   O   O   O
+     Empleado 8   O   O   O   X   O   O   O   O   O   O
+     Empleado 9   X   O   O   O   O   O   O   O   O   O
+    Empleado 10   O   O   O   O   O   X   O   O   O   O
+    Empleado 11   O   O   O   O   O   O   O   O   O   X
+    Empleado 12   X   O   O   O   O   O   O   O   O   O
+    Empleado 13   O   O   O   O   O   O   O   O   X   O
+    Empleado 14   O   O   O   O   O   O   X   O   O   O
+    Empleado 15   O   O   X   O   O   O   O   O   O   O
+    Empleado 16   O   O   O   O   O   O   X   O   O   O
+    Empleado 17   O   O   O   O   O   O   O   O   O   O
+    Empleado 18   X   O   O   O   O   O   O   O   O   O
+    Empleado 19   O   X   O   O   O   O   O   O   O   O
+
+Dia 23
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   X   O   O   O   O   O   O   O
+     Empleado 1   O   O   X   O   O   O   O   O   O   O
+     Empleado 2   O   O   O   O   X   O   O   O   O   O
+     Empleado 3   O   O   O   O   O   O   O   X   O   O
+     Empleado 4   X   O   O   O   O   O   O   O   O   O
+     Empleado 5   O   X   O   O   O   O   O   O   O   O
+     Empleado 6   X   O   O   O   O   O   O   O   O   O
+     Empleado 7   O   O   O   O   O   O   O   O   O   O
+     Empleado 8   O   O   O   O   O   X   O   O   O   O
+     Empleado 9   O   O   O   X   O   O   O   O   O   O
+    Empleado 10   O   O   O   O   O   O   X   O   O   O
+    Empleado 11   O   O   O   O   O   O   O   O   O   O
+    Empleado 12   O   O   O   O   O   O   O   O   O   O
+    Empleado 13   O   X   O   O   O   O   O   O   O   O
+    Empleado 14   O   O   O   O   O   O   X   O   O   O
+    Empleado 15   O   O   O   X   O   O   O   O   O   O
+    Empleado 16   O   O   O   O   O   X   O   O   O   O
+    Empleado 17   O   O   O   O   O   O   O   O   O   X
+    Empleado 18   O   X   O   O   O   O   O   O   O   O
+    Empleado 19   O   O   O   O   O   O   O   O   X   O
+
+Dia 24
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   X   O   O   O   O   O   O   O
+     Empleado 1   X   O   O   O   O   O   O   O   O   O
+     Empleado 2   O   O   O   O   O   X   O   O   O   O
+     Empleado 3   O   O   O   X   O   O   O   O   O   O
+     Empleado 4   O   O   O   O   X   O   O   O   O   O
+     Empleado 5   X   O   O   O   O   O   O   O   O   O
+     Empleado 6   O   O   O   O   O   O   O   O   O   X
+     Empleado 7   O   O   O   O   O   O   O   X   O   O
+     Empleado 8   O   O   O   O   O   O   O   X   O   O
+     Empleado 9   O   O   O   O   O   O   O   O   O   O
+    Empleado 10   O   O   O   O   O   O   X   O   O   O
+    Empleado 11   X   O   O   O   O   O   O   O   O   O
+    Empleado 12   O   O   O   O   X   O   O   O   O   O
+    Empleado 13   O   O   O   O   O   O   O   O   O   O
+    Empleado 14   O   X   O   O   O   O   O   O   O   O
+    Empleado 15   O   X   O   O   O   O   O   O   O   O
+    Empleado 16   O   O   O   O   O   O   O   O   X   O
+    Empleado 17   O   O   X   O   O   O   O   O   O   O
+    Empleado 18   O   O   O   O   O   O   O   O   O   X
+    Empleado 19   O   O   O   X   O   O   O   O   O   O
+
+Dia 25
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   X   O   O   O   O   O   O   O
+     Empleado 1   O   O   O   X   O   O   O   O   O   O
+     Empleado 2   O   O   O   O   X   O   O   O   O   O
+     Empleado 3   O   O   O   O   O   O   O   O   O   X
+     Empleado 4   O   O   O   X   O   O   O   O   O   O
+     Empleado 5   O   O   O   O   X   O   O   O   O   O
+     Empleado 6   X   O   O   O   O   O   O   O   O   O
+     Empleado 7   O   O   O   O   O   O   O   O   O   O
+     Empleado 8   O   O   O   O   O   O   O   O   X   O
+     Empleado 9   O   O   O   X   O   O   O   O   O   O
+    Empleado 10   O   X   O   O   O   O   O   O   O   O
+    Empleado 11   O   O   O   O   O   X   O   O   O   O
+    Empleado 12   O   O   O   O   O   O   X   O   O   O
+    Empleado 13   O   O   O   O   O   O   O   O   X   O
+    Empleado 14   O   X   O   O   O   O   O   O   O   O
+    Empleado 15   O   O   O   O   O   O   X   O   O   O
+    Empleado 16   O   O   O   O   O   O   O   X   O   O
+    Empleado 17   X   O   O   O   O   O   O   O   O   O
+    Empleado 18   O   O   O   O   O   O   O   O   O   X
+    Empleado 19   O   O   X   O   O   O   O   O   O   O
+
+Dia 26
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   X   O   O   O   O   O   O   O   O
+     Empleado 1   O   O   O   O   O   O   O   O   O   X
+     Empleado 2   X   O   O   O   O   O   O   O   O   O
+     Empleado 3   O   O   O   O   O   O   O   O   O   O
+     Empleado 4   O   O   O   O   O   O   O   X   O   O
+     Empleado 5   O   O   O   O   O   O   O   X   O   O
+     Empleado 6   O   O   O   O   X   O   O   O   O   O
+     Empleado 7   X   O   O   O   O   O   O   O   O   O
+     Empleado 8   O   O   O   O   O   X   O   O   O   O
+     Empleado 9   X   O   O   O   O   O   O   O   O   O
+    Empleado 10   O   O   X   O   O   O   O   O   O   O
+    Empleado 11   O   O   O   O   O   O   O   O   O   O
+    Empleado 12   O   O   O   O   O   O   X   O   O   O
+    Empleado 13   O   O   O   O   O   X   O   O   O   O
+    Empleado 14   O   O   O   X   O   O   O   O   O   O
+    Empleado 15   O   O   O   O   X   O   O   O   O   O
+    Empleado 16   O   X   O   O   O   O   O   O   O   O
+    Empleado 17   O   O   O   O   O   O   O   O   X   O
+    Empleado 18   O   O   O   O   O   O   X   O   O   O
+    Empleado 19   O   O   X   O   O   O   O   O   O   O
+
+Dia 27
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   O   O   X   O   O   O   O   O
+     Empleado 1   O   O   O   O   O   O   X   O   O   O
+     Empleado 2   O   O   O   X   O   O   O   O   O   O
+     Empleado 3   O   O   O   O   X   O   O   O   O   O
+     Empleado 4   O   X   O   O   O   O   O   O   O   O
+     Empleado 5   O   X   O   O   O   O   O   O   O   O
+     Empleado 6   X   O   O   O   O   O   O   O   O   O
+     Empleado 7   O   O   X   O   O   O   O   O   O   O
+     Empleado 8   O   X   O   O   O   O   O   O   O   O
+     Empleado 9   O   O   O   O   O   O   O   X   O   O
+    Empleado 10   O   O   O   O   O   O   O   O   X   O
+    Empleado 11   O   O   X   O   O   O   O   O   O   O
+    Empleado 12   X   O   O   O   O   O   O   O   O   O
+    Empleado 13   O   O   O   X   O   O   O   O   O   O
+    Empleado 14   O   O   O   O   O   O   X   O   O   O
+    Empleado 15   O   O   O   O   O   X   O   O   O   O
+    Empleado 16   O   O   O   O   O   O   O   O   O   X
+    Empleado 17   O   O   O   O   O   X   O   O   O   O
+    Empleado 18   O   O   O   O   O   O   O   O   O   O
+    Empleado 19   O   O   O   O   O   O   O   O   O   O
+
+Dia 28
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   O   O   X   O   O   O   O   O
+     Empleado 1   O   X   O   O   O   O   O   O   O   O
+     Empleado 2   O   O   O   O   O   O   O   O   O   O
+     Empleado 3   O   O   O   X   O   O   O   O   O   O
+     Empleado 4   O   O   O   O   O   O   O   O   O   O
+     Empleado 5   O   X   O   O   O   O   O   O   O   O
+     Empleado 6   O   O   O   O   X   O   O   O   O   O
+     Empleado 7   O   O   O   O   X   O   O   O   O   O
+     Empleado 8   O   O   X   O   O   O   O   O   O   O
+     Empleado 9   O   O   O   O   O   O   O   X   O   O
+    Empleado 10   O   O   O   O   O   X   O   O   O   O
+    Empleado 11   O   O   O   O   O   O   X   O   O   O
+    Empleado 12   O   O   O   O   O   O   O   X   O   O
+    Empleado 13   O   O   X   O   O   O   O   O   O   O
+    Empleado 14   O   O   O   O   O   O   X   O   O   O
+    Empleado 15   O   O   O   O   O   O   O   O   O   X
+    Empleado 16   O   O   O   O   O   O   O   O   X   O
+    Empleado 17   X   O   O   O   O   O   O   O   O   O
+    Empleado 18   O   O   O   O   O   X   O   O   O   O
+    Empleado 19   X   O   O   O   O   O   O   O   O   O
+
+Dia 29
+       Empleado  T0  T1  T2  T3  T4  T5  T6  T7  T8  T9
+     Empleado 0   O   O   O   X   O   O   O   O   O   O
+     Empleado 1   O   O   X   O   O   O   O   O   O   O
+     Empleado 2   O   O   O   O   X   O   O   O   O   O
+     Empleado 3   O   O   O   O   O   O   O   O   O   X
+     Empleado 4   O   O   O   O   O   O   O   O   O   O
+     Empleado 5   O   O   O   X   O   O   O   O   O   O
+     Empleado 6   X   O   O   O   O   O   O   O   O   O
+     Empleado 7   X   O   O   O   O   O   O   O   O   O
+     Empleado 8   O   O   X   O   O   O   O   O   O   O
+     Empleado 9   O   O   O   O   O   O   O   O   X   O
+    Empleado 10   O   X   O   O   O   O   O   O   O   O
+    Empleado 11   O   O   O   O   O   O   O   X   O   O
+    Empleado 12   O   O   O   O   O   O   O   O   O   O
+    Empleado 13   O   O   O   O   O   O   X   O   O   O
+    Empleado 14   O   O   O   O   O   O   O   O   O   X
+    Empleado 15   X   O   O   O   O   O   O   O   O   O
+    Empleado 16   O   O   O   O   O   O   O   X   O   O
+    Empleado 17   O   O   O   O   O   O   O   O   X   O
+    Empleado 18   O   O   O   O   O   X   O   O   O   O
+    Empleado 19   O   O   O   O   O   X   O   O   O   O
+
+Valor objetivo: 34508

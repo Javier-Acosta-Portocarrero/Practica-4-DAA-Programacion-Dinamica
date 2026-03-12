@@ -1,0 +1,57 @@
+Dia 0
+       Empleado  T0  T1  T2
+     Empleado 0   X   O   O
+     Empleado 1   X   O   O
+     Empleado 2   O   O   O
+     Empleado 3   O   X   O
+     Empleado 4   O   O   X
+
+Dia 1
+       Empleado  T0  T1  T2
+     Empleado 0   O   O   X
+     Empleado 1   O   O   O
+     Empleado 2   X   O   O
+     Empleado 3   X   O   O
+     Empleado 4   O   X   O
+
+Dia 2
+       Empleado  T0  T1  T2
+     Empleado 0   X   O   O
+     Empleado 1   O   O   X
+     Empleado 2   O   O   O
+     Empleado 3   O   X   O
+     Empleado 4   O   O   O
+
+Dia 3
+       Empleado  T0  T1  T2
+     Empleado 0   O   O   O
+     Empleado 1   X   O   O
+     Empleado 2   O   X   O
+     Empleado 3   O   O   X
+     Empleado 4   O   O   O
+
+Dia 4
+       Empleado  T0  T1  T2
+     Empleado 0   X   O   O
+     Empleado 1   X   O   O
+     Empleado 2   O   O   X
+     Empleado 3   O   O   O
+     Empleado 4   O   X   O
+
+Dia 5
+       Empleado  T0  T1  T2
+     Empleado 0   O   O   X
+     Empleado 1   O   O   O
+     Empleado 2   X   O   O
+     Empleado 3   X   O   O
+     Empleado 4   O   X   O
+
+Dia 6
+       Empleado  T0  T1  T2
+     Empleado 0   O   O   X
+     Empleado 1   O   X   O
+     Empleado 2   X   O   O
+     Empleado 3   O   O   O
+     Empleado 4   X   O   O
+
+Valor objetivo: 2296
