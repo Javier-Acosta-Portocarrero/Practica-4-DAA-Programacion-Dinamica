@@ -17,8 +17,8 @@
 #include "planificacion_empleados/algoritmo_aproximado_planificacion.h"
 #include "planificacion_empleados/algoritmo_voraz_planificacion_dia.h"
 #include "planificacion_empleados/algoritmo_dinamico_planificacion_dia.h"
-#include "factory_algoritmo_planificacion_json.h"
-#include "generador_instancias_planificacion.h"
+#include "planificacion_empleados/factory_algoritmo_planificacion_json.h"
+#include "planificacion_empleados/generador_instancias_planificacion.h"
 
 #include <iostream>
 #include <random>

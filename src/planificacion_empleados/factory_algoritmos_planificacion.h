@@ -12,7 +12,7 @@
 #ifndef FACTORY_ALGORIMTO_PLANIFICACION_H_
 #define FACTORY_ALGORIMTO_PLANIFICACION_H_
 
-#include "algoritmo.h"
+#include "../lib/algoritmo.h"
 
 class FactoryAlgoritmosPlanificacion {
  public:
