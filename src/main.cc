@@ -32,42 +32,46 @@ int main() {
   std::cin >> modo_ejecucion;
   if (modo_ejecucion == 0) {
     std::srand(time(nullptr));
-    size_t empleados = 10;
-    size_t turnos = 5;
-    std::vector<size_t> dias = {5, 10, 15, 20, 25, 30, 40, 50};
+    size_t empleados = 30;
+    size_t turnos = 10;
+    std::vector<size_t> dias = {10, 25, 50, 75, 100, 125, 150, 200};
     GeneradorInstanciasPlanificacion generador;
     PlanificadorEmpleados planificador(nullptr);
     for (size_t dia : dias) {
-      InstanciaPlanificacionEmpleados* instancia = generador.GenerarInstancia(empleados, dia, turnos);
-      planificador.SetEstrategia(new AlgoritmoAproximadoPlanificacion(new AlgoritmoDinamicoPlanificacionDia(), 1, 2));
+      // Se repite 5 veces las medida para mayor precisión.
       double tiempo_ejecucion_dinamico{0.0};
       float valor_objetivo_dinamico{0.0};
-      auto inicio = std::chrono::high_resolution_clock::now();
-      SolucionPlanificacionEmpleados* solucion_dinamica = planificador.Planificar(instancia);
-      auto fin = std::chrono::high_resolution_clock::now();
-      tiempo_ejecucion_dinamico = std::chrono::duration<double>(fin - inicio).count();
-      valor_objetivo_dinamico = solucion_dinamica->GetValorObjetivo();
-
-      planificador.SetEstrategia(new AlgoritmoAproximadoPlanificacion(new AlgoritmoVorazPlanificacionDia(), 1, 2));
       double tiempo_ejecucion_voraz{0.0};
       float valor_objetivo_voraz{0.0};
-      inicio = std::chrono::high_resolution_clock::now();
-      SolucionPlanificacionEmpleados* solucion_voraz = planificador.Planificar(instancia);
-      fin = std::chrono::high_resolution_clock::now();
-      tiempo_ejecucion_voraz = std::chrono::duration<double>(fin - inicio).count();
-      valor_objetivo_voraz = solucion_voraz->GetValorObjetivo();
+      size_t cantidad_iter{5};
+      for (size_t iter{0}; iter < cantidad_iter; ++iter) {
+        InstanciaPlanificacionEmpleados* instancia = generador.GenerarInstancia(empleados, dia, turnos);
+        planificador.SetEstrategia(new AlgoritmoAproximadoPlanificacion(new AlgoritmoDinamicoPlanificacionDia(), 1, 2));
+        auto inicio = std::chrono::high_resolution_clock::now();
+        SolucionPlanificacionEmpleados* solucion_dinamica = planificador.Planificar(instancia);
+        auto fin = std::chrono::high_resolution_clock::now();
+        tiempo_ejecucion_dinamico += std::chrono::duration<double>(fin - inicio).count();
+        valor_objetivo_dinamico += solucion_dinamica->GetValorObjetivo();
+
+        planificador.SetEstrategia(new AlgoritmoAproximadoPlanificacion(new AlgoritmoVorazPlanificacionDia(), 1, 2));
+        inicio = std::chrono::high_resolution_clock::now();
+        SolucionPlanificacionEmpleados* solucion_voraz = planificador.Planificar(instancia);
+        fin = std::chrono::high_resolution_clock::now();
+        tiempo_ejecucion_voraz += std::chrono::duration<double>(fin - inicio).count();
+        valor_objetivo_voraz += solucion_voraz->GetValorObjetivo();
+
+        // Libreamos memoria
+        delete solucion_dinamica;
+        delete solucion_voraz;
+        delete instancia;
+      }
 
       // Se imprime días, turnos, empleados, tiempo y valor objetivo para cada algoritmo.
       std::cout << "Días: " << dia << ", Turnos: " << turnos << ", Empleados: " << empleados << "\n";
-      std::cout << "Algoritmo Dinámico: Tiempo de ejecución: " << tiempo_ejecucion_dinamico 
-                << " segundos, Valor objetivo: " << valor_objetivo_dinamico << "\n";
-      std::cout << "Algoritmo Voraz: Tiempo de ejecución: " << tiempo_ejecucion_voraz
-                << " segundos, Valor objetivo: " << valor_objetivo_voraz << "\n\n";
-
-      // Libreamos memoria 
-      delete instancia;
-      delete solucion_dinamica;
-      delete solucion_voraz;
+      std::cout << "Algoritmo Dinámico: Tiempo de ejecución: " << tiempo_ejecucion_dinamico / cantidad_iter 
+                << " segundos, Valor objetivo: " << valor_objetivo_dinamico / cantidad_iter << "\n";
+      std::cout << "Algoritmo Voraz: Tiempo de ejecución: " << tiempo_ejecucion_voraz / cantidad_iter
+                << " segundos, Valor objetivo: " << valor_objetivo_voraz / cantidad_iter << "\n\n";
     }
   } else if (modo_ejecucion == 1) {
     std::cout << "Introduza la ruta del fichero json con la configuración del algoritmo a usar.\n";
