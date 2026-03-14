@@ -21,7 +21,14 @@
 
 class AlgoritmoAproximadoPlanificacion : public AlgoritmoDivideYVenceras {
  public:
-  AlgoritmoAproximadoPlanificacion(Algoritmo* algoritmo_samll) : algoritmo_small_{algoritmo_samll} {}
+  AlgoritmoAproximadoPlanificacion(
+    Algoritmo* algoritmo_samll, 
+    unsigned small_size = 1, 
+    unsigned cantidad_divisiones = 2) :  
+        algoritmo_small_{algoritmo_samll}, 
+        small_size_{small_size}, 
+        cantidad_divisiones_{cantidad_divisiones} {}
+
   ~AlgoritmoAproximadoPlanificacion() { delete algoritmo_small_;};
   
  protected:
@@ -32,6 +39,8 @@ class AlgoritmoAproximadoPlanificacion : public AlgoritmoDivideYVenceras {
 
  private:
   Algoritmo* algoritmo_small_ = nullptr;
+  unsigned small_size_ = 1;
+  unsigned cantidad_divisiones_ = 2;
 
   std::pair<int, int> EncontrarPeorDiaTrabajdoNoMinimo(unsigned empleado, SolucionPlanificacionEmpleados* solucion);
   std::pair<unsigned, unsigned> EncontrarPeorDiaTrabajado(unsigned empleado, SolucionPlanificacionEmpleados* solucion);

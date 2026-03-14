@@ -20,90 +20,82 @@ std::vector<Instancia*> AlgoritmoAproximadoPlanificacion::Divide(Instancia* entr
   InstanciaPlanificacionEmpleados* entrada_procesada = dynamic_cast<InstanciaPlanificacionEmpleados*>(entrada);
   const size_t cantidad_turnos = entrada_procesada->GetCantidadTurnos();
   const size_t cantidad_empleados = entrada_procesada->GetCantidadEmpleados();
-  // Primero completamos toda la información de la parte izquierda de la planificación
-  const unsigned dias_izquierda{entrada_procesada->GetCantidadDias() / 2};
-  std::vector<std::vector<std::vector<int>>> satisfaccion_izq(
-      cantidad_empleados,
-      std::vector<std::vector<int>>(
-          dias_izquierda,
-          std::vector<int>(cantidad_turnos, 0)));
-    
-  std::vector<std::vector<unsigned>> min_empleados_izq(dias_izquierda, std::vector<unsigned>(cantidad_turnos, 0));
-  
-  for (size_t dia{0}; dia < dias_izquierda; ++dia) {
-    for (size_t turno{0}; turno < cantidad_turnos; ++turno) {
-      min_empleados_izq[dia][turno] = entrada_procesada->GetMinimoEmpleados(dia, turno);
-    }
-  }
-  for (size_t empleado{0}; empleado < cantidad_empleados; ++empleado) {
-    for (size_t dia{0}; dia < dias_izquierda; ++dia) {
-      for (size_t turno{0}; turno < cantidad_turnos; ++turno) {
-        satisfaccion_izq[empleado][dia][turno] = entrada_procesada->GetSatisfaccion(empleado, dia, turno);
-      }
-    }
-  }
-  // Después completamos toda la información de la parte derecha de la planificación.
-  const unsigned dias_derecha{entrada_procesada->GetCantidadDias() - dias_izquierda};
-  std::vector<std::vector<std::vector<int>>> satisfaccion_dcha(
-      cantidad_empleados,
-      std::vector<std::vector<int>>(
-          dias_derecha,
-          std::vector<int>(cantidad_turnos, 0)));
+  // Calculamos la cantidad de días que tendrá cada subinstancia.
+  const unsigned total_dias = entrada_procesada->GetCantidadDias();
+  const unsigned dias_base = total_dias / cantidad_divisiones_;
+  // Si la cantidad de días no es divisible entre la cantidad de divisiones, se suma 1 día a "resto" primeras
+  // instancias.
+  const unsigned resto = total_dias % cantidad_divisiones_;
 
-  std::vector<std::vector<unsigned>> min_empleados_dcha(dias_derecha, std::vector<unsigned>(cantidad_turnos, 0));
-  // Es importante destacar que al acceder a la parte derecha, debemos ajustar el índice del 
-  // día para reflejar su posición real en la planificación completa.
-  for (size_t dia{0}; dia < dias_derecha; ++dia) {
-    for (size_t turno{0}; turno < cantidad_turnos; ++turno) {
-      const unsigned dia_real = dias_izquierda + dia;
-      min_empleados_dcha[dia][turno] = entrada_procesada->GetMinimoEmpleados(dia_real, turno);
-    }
-  }
-  for (size_t empleado{0}; empleado < cantidad_empleados; ++empleado) {
-    for (size_t dia{0}; dia < dias_derecha; ++dia) {
-      for (size_t turno{0}; turno < cantidad_turnos; ++turno) {
-        const unsigned dia_real = dias_izquierda + dia;
-        satisfaccion_dcha[empleado][dia][turno] = entrada_procesada->GetSatisfaccion(empleado, dia_real, turno);
-      }
-    }
-  }
-  // Finalmente, creamos las dos instancias con la información que hemos recopilado, las 
-  // partes comunes, como los nombres de empleados, turnos y descansos, se pasan a ambas instancias.
   const std::vector<std::string>& nombres_empleados = entrada_procesada->GetNombresEmpleados();
   const std::vector<std::string>& nombres_turnos = entrada_procesada->GetNombresTurnos();
   const std::vector<unsigned>& descansos = entrada_procesada->GetDescansoEmpleados();
   const unsigned dias_originales = entrada_procesada->GetCantidadDiasOriginales();
-  InstanciaPlanificacionEmpleados* primera_instancia = new InstanciaPlanificacionEmpleados(
-      nombres_empleados,
-      nombres_turnos, 
-      dias_izquierda,
-      dias_originales,
-      satisfaccion_izq,
-      min_empleados_izq,
-      descansos);
-  InstanciaPlanificacionEmpleados* segunda_instancia = new InstanciaPlanificacionEmpleados(
-      nombres_empleados,
-      nombres_turnos, 
-      dias_derecha,
-      dias_originales,
-      satisfaccion_dcha,
-      min_empleados_dcha,
-      descansos);
-  // Devolvemos las dos instancias resultantes de la división.
+
   std::vector<Instancia*> instancias;
-  instancias.emplace_back(primera_instancia);
-  instancias.emplace_back(segunda_instancia);
+  unsigned dia_inicio = 0;
+  // Se divide la instancia original en tantas instancias como divisiones se hayan indicado.
+  for (unsigned division = 0; division < cantidad_divisiones_; ++division) {
+    const unsigned dias_instancia_actual = dias_base + (division < resto ? 1 : 0);
+
+    std::vector<std::vector<std::vector<int>>> satisfaccion_sub(
+        cantidad_empleados,
+        std::vector<std::vector<int>>(
+            dias_instancia_actual,
+            std::vector<int>(cantidad_turnos, 0)));
+
+    std::vector<std::vector<unsigned>> min_empleados_sub(
+        dias_instancia_actual,
+        std::vector<unsigned>(cantidad_turnos, 0));
+
+    // Primero se asignan los mínimos de empleados por día y turno para cada subinstancia.
+    for (size_t dia{0}; dia < dias_instancia_actual; ++dia) {
+      for (size_t turno{0}; turno < cantidad_turnos; ++turno) {
+        // Hay que ajustar el índice de días para obtener el correcto de la instancia original.
+        const unsigned dia_real = dia_inicio + dia;
+        min_empleados_sub[dia][turno] = entrada_procesada->GetMinimoEmpleados(dia_real, turno);
+      }
+    }
+    // Después se asignan las satisfacciones de cada empleado para cada día y turno.
+    for (size_t empleado{0}; empleado < cantidad_empleados; ++empleado) {
+      for (size_t dia{0}; dia < dias_instancia_actual; ++dia) {
+        for (size_t turno{0}; turno < cantidad_turnos; ++turno) {
+          const unsigned dia_real = dia_inicio + dia;
+          satisfaccion_sub[empleado][dia][turno] =
+              entrada_procesada->GetSatisfaccion(empleado, dia_real, turno);
+        }
+      }
+    }
+    InstanciaPlanificacionEmpleados* nueva_instancia = new InstanciaPlanificacionEmpleados(
+        nombres_empleados,
+        nombres_turnos,
+        dias_instancia_actual,
+        dias_originales,
+        satisfaccion_sub,
+        min_empleados_sub,
+        descansos);
+
+    instancias.emplace_back(nueva_instancia);
+    dia_inicio += dias_instancia_actual;
+  }
+
   return instancias;
 }
 
 Solucion* AlgoritmoAproximadoPlanificacion::Combine(std::vector<Solucion*> soluciones) {
-  SolucionPlanificacionEmpleados* solucion_izq = dynamic_cast<SolucionPlanificacionEmpleados*>(soluciones[0]);
-  SolucionPlanificacionEmpleados* solucion_dcha = dynamic_cast<SolucionPlanificacionEmpleados*>(soluciones[1]);
+  std::vector<SolucionPlanificacionEmpleados*> soluciones_cast;
+  for (size_t i{0}; i < soluciones.size(); ++i) {
+    soluciones_cast.push_back(dynamic_cast<SolucionPlanificacionEmpleados*>(soluciones[i]));
+  }
   // Inicializamos los componentes de la solución, teniendo en cuenta que la cantidad de días es la suma de 
   // las partes izquierda y derecha, mientras que la cantidad de empleados y turnos se mantiene igual.
-  const unsigned cantidad_dias_fusion{solucion_izq->GetCantidadDias() + solucion_dcha->GetCantidadDias()};
-  const size_t cantidad_empleados_fusion{solucion_izq->GetCantidadEmpleados()};
-  const size_t cantidad_turnos_fusion{solucion_izq->GetCantidadTurnos()};
+  unsigned cantidad_dias_fusion{0};
+  for (size_t i{0}; i < soluciones_cast.size(); ++i) {
+    cantidad_dias_fusion += soluciones_cast[i]->GetCantidadDias();
+  }
+  const size_t cantidad_empleados_fusion{soluciones_cast[0]->GetCantidadEmpleados()};
+  const size_t cantidad_turnos_fusion{soluciones_cast[0]->GetCantidadTurnos()};
+
   std::vector<std::vector<std::vector<int>>> satisfaccion_fusion(
       cantidad_empleados_fusion,
       std::vector<std::vector<int>>(
@@ -121,52 +113,50 @@ Solucion* AlgoritmoAproximadoPlanificacion::Combine(std::vector<Solucion*> soluc
       std::vector<unsigned>(cantidad_turnos_fusion, 0));
 
   // Ahora asignamos los valores correspondientes a cada parte de la planificación, 
-  // teniendo cuidado de ajustar los índices de los días para la parte derecha.
+  // teniendo cuidado de ajustar los índices de los días para las distintas soluciones.
   std::vector<unsigned> dias_trabajados_empleado_fusion(cantidad_empleados_fusion, 0);
-  size_t dias_izq = solucion_izq->GetCantidadDias();
+  unsigned offset_dias = 0;
   // Comenzamos por asignar los mínimos de empleados.
-  for (size_t dia{0}; dia < cantidad_dias_fusion; ++dia) {
-    for (size_t turno{0}; turno < cantidad_turnos_fusion; ++turno) {
-      if (dia < dias_izq) {
-        min_empleados_fusion[dia][turno] = solucion_izq->GetMinimoEmpleados(dia, turno);
-      } else {
-        const unsigned dia_real = dia - dias_izq;
-        min_empleados_fusion[dia][turno] = solucion_dcha->GetMinimoEmpleados(dia_real, turno);
-      }
-    }
-  }
-  // Después asignamos las satisfacciones y los turnos trabajados.
-  for (size_t empleado{0}; empleado < cantidad_empleados_fusion; ++empleado) {
-    for (size_t dia{0}; dia < cantidad_dias_fusion; ++dia) {
+  for (size_t s{0}; s < soluciones_cast.size(); ++s) {
+    for (size_t dia{0}; dia < soluciones_cast[s]->GetCantidadDias(); ++dia) {
       for (size_t turno{0}; turno < cantidad_turnos_fusion; ++turno) {
-        if (dia < dias_izq) {
-          satisfaccion_fusion[empleado][dia][turno] = solucion_izq->GetSatisfaccion(empleado, dia, turno);
-          if (solucion_izq->TrabajaEmpleadoDiaTurno(empleado, dia, turno)) {
-            trabajados_fusion[empleado][dia][turno] = true;
-            ++dias_trabajados_empleado_fusion[empleado];
-          }
-        } else {
-          const unsigned dia_real = dia - dias_izq;
-          satisfaccion_fusion[empleado][dia][turno] = solucion_dcha->GetSatisfaccion(empleado, dia_real, turno);
-          if (solucion_dcha->TrabajaEmpleadoDiaTurno(empleado, dia_real, turno)) {
-            trabajados_fusion[empleado][dia][turno] = true;
-            ++dias_trabajados_empleado_fusion[empleado];
-          }
-        } 
+        min_empleados_fusion[offset_dias + dia][turno] =
+            soluciones_cast[s]->GetMinimoEmpleados(dia, turno);
       }
     }
+    offset_dias += soluciones_cast[s]->GetCantidadDias();
   }
+
+  offset_dias = 0;
+  // Después asignamos las satisfacciones y los turnos trabajados.
+  for (size_t s{0}; s < soluciones_cast.size(); ++s) {
+    for (size_t empleado{0}; empleado < cantidad_empleados_fusion; ++empleado) {
+      for (size_t dia{0}; dia < soluciones_cast[s]->GetCantidadDias(); ++dia) {
+        for (size_t turno{0}; turno < cantidad_turnos_fusion; ++turno) {
+          satisfaccion_fusion[empleado][offset_dias + dia][turno] =
+              soluciones_cast[s]->GetSatisfaccion(empleado, dia, turno);
+
+          if (soluciones_cast[s]->TrabajaEmpleadoDiaTurno(empleado, dia, turno)) {
+            trabajados_fusion[empleado][offset_dias + dia][turno] = true;
+            ++dias_trabajados_empleado_fusion[empleado];
+          }
+        }
+      }
+    }
+    offset_dias += soluciones_cast[s]->GetCantidadDias();
+  }
+
   // Creamos la solución resulatnte con los componentes calculados.
   SolucionPlanificacionEmpleados* solucion_fusionada = new SolucionPlanificacionEmpleados(
-      solucion_izq->GetNombresEmpleados(),
+      soluciones_cast[0]->GetNombresEmpleados(),
       trabajados_fusion,
       dias_trabajados_empleado_fusion,
-      solucion_izq->GetNombresTurnos(),
+      soluciones_cast[0]->GetNombresTurnos(),
       cantidad_dias_fusion,
-      solucion_izq->GetCantidadDiasOriginales(),
+      soluciones_cast[0]->GetCantidadDiasOriginales(),
       satisfaccion_fusion,
       min_empleados_fusion,
-      solucion_izq->GetDescansosEmpleados());
+      soluciones_cast[0]->GetDescansosEmpleados());
 
   // Restauramos las reestricciones globales, que son los días mínimos de descanso de cada empleado,
   // solo si la cantidad de dias de la fusión es igual a la cantidad de días originales.
@@ -197,6 +187,7 @@ Solucion* AlgoritmoAproximadoPlanificacion::Combine(std::vector<Solucion*> soluc
   for (size_t i{0}; i < soluciones.size(); ++i) {
     delete soluciones[i];
   }
+
   return solucion_fusionada;
 }
 
@@ -258,5 +249,5 @@ Solucion* AlgoritmoAproximadoPlanificacion::SolveSmall(Instancia* entrada) {
 bool AlgoritmoAproximadoPlanificacion::IsSmall(Instancia* entrada) {
   InstanciaPlanificacionEmpleados* entrada_procesada = dynamic_cast<InstanciaPlanificacionEmpleados*>(entrada);
   // Lo consideramos pequeño cuando la cantidad de días es 1 o menos,
-  return (entrada_procesada->GetCantidadDias() <= 1);
+  return (entrada_procesada->GetCantidadDias() <= small_size_);
 }
