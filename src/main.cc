@@ -78,7 +78,7 @@ int main() {
     std::string ruta_fichero_algoritmo{"algoritmo.json"};
     std::cin >> ruta_fichero_algoritmo;
 
-    std::cout << "Introduzca la ruta del fichero de entrada con los datos de la planificación:\n";
+    std::cout << "\nIntroduzca la ruta del fichero de entrada con los datos de la planificación:\n";
     std::string ruta_fichero_instancia{"predeterminado.txt"};
     std::cin >> ruta_fichero_instancia;
 
