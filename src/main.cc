@@ -19,6 +19,7 @@
 #include "planificacion_empleados/algoritmo_dinamico_planificacion_dia.h"
 #include "planificacion_empleados/factory_algoritmo_planificacion_json.h"
 #include "planificacion_empleados/generador_instancias_planificacion.h"
+#include "planificacion_empleados/algoritmo_intercambios_planificacion_dia.h"
 
 #include <iostream>
 #include <random>
