@@ -39,8 +39,8 @@ std::vector<std::vector<int>> AlgoritmoDinamicoPlanificacionDia::ConstruirTablaD
 
   size_t cantidad_empleados = solucion->GetCantidadEmpleados();
   unsigned slots = EncontrarCantidadSlots(solucion);
-  std::vector<std::vector<int>> tabla_dinamica(cantidad_empleados, std::vector<int>(slots + 1, 0));
-  for (size_t empleados{0}; empleados < cantidad_empleados; ++empleados) {
+  std::vector<std::vector<int>> tabla_dinamica(cantidad_empleados + 1, std::vector<int>(slots + 1, 0));
+  for (size_t empleados{0}; empleados < cantidad_empleados + 1; ++empleados) {
     for (unsigned slot{0}; slot <= slots; ++slot) {
       // Caso base, no hay empleados o slots
       if (empleados == 0 || slot == 0) {
