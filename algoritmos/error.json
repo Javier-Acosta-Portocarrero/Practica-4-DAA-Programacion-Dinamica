@@ -1,0 +1,8 @@
+{
+	"class": "DivideAndConquer",
+    "smallSize": 2,
+    "divisions": 2,
+	"smallSolver": {
+		"class": "Greedy"
+	}
+}

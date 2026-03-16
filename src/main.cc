@@ -47,7 +47,7 @@ int main() {
       size_t cantidad_iter{5};
       for (size_t iter{0}; iter < cantidad_iter; ++iter) {
         InstanciaPlanificacionEmpleados* instancia = generador.GenerarInstancia(empleados, dia, turnos);
-        planificador.SetEstrategia(new AlgoritmoAproximadoPlanificacion(new AlgoritmoDinamicoPlanificacionDia(), 1, 2));
+        planificador.SetEstrategia(new AlgoritmoAproximadoPlanificacion(new AlgoritmoIntercambiosPlanificacionDia, 1, 2));
         auto inicio = std::chrono::high_resolution_clock::now();
         SolucionPlanificacionEmpleados* solucion_dinamica = planificador.Planificar(instancia);
         auto fin = std::chrono::high_resolution_clock::now();

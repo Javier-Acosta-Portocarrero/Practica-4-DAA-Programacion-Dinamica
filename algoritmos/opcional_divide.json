@@ -1,0 +1,12 @@
+{
+	"class": "BinaryDivideAndConquer",
+    "smallSize": 4,
+	"smallSolver": {
+		"class": "DivideAndConquer",
+        "divisions": 2,
+        "smallSize": 1,
+		"smallSolver": {
+			"class": "Greedy"
+		}
+	}
+}
