@@ -1,19 +1,18 @@
-# Práctica 3 – Divide y Vencerás
+# Práctica 4 – Programación dinámica
 
 ## Descripción general
 
-Autores:
+Autor:
 - Javier Acosta Portocarrero
-- Gabriel Gallardo Noda
 
-Se han realizado ambas partes de la práctica, la primera con la implementación de los algoritmos QuickSort y MergerSort, y la segunda con la implmentación de un programa de planificación de empleados. En ambas partes se ha experimientado con distintas instancias, además, se ha seguido el **patrón estrategia**, el **patrón plantilla** y los principios **SOLID**.
+Se han realizado todos los puntos obligatorios de la práctica, incluyendo el primer punto opcional, la implmentación del programa consiste en un programa de planificación de empleados, usando programación dinámica, voraz y algoritmos divide y vencerás. Se ha experimientado con distintas instancias, además, se ha seguido el **patrón estrategia**, el **patrón plantilla**, el **patron Factory Methods** y los principios **SOLID**.
 
 ## Requisitos
 
 Compilador: g++
 Herramienta de compilación: make
 
-Para la parte 2 se debe tener instalada la dependencia nlohmann, API usada para la lectura de ficheros json en c++.
+Se debe tener instalada la dependencia nlohmann, API usada para la lectura de ficheros json en c++.
 
 ## Compilación
 
@@ -27,7 +26,7 @@ Esto compilará el código fuente y generará el ejecutable principal.
 
 Una vez compilado el proyecto, ejecutar:
 
-./practica3_DAA
+./practica4_DAA
 
 El programa mostrará información de cómo ejecutarlo y qué parámetros pasar.
 
