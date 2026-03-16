@@ -5,20 +5,22 @@
 // Curso: 3º
 // Practica 4: Programación Dinámica
 // Autor: Javier Acosta Portocarrero
-// Fecha: 14/03/2026
-// Archivo factory_algoritmo_planificacion.h: fichero de declaración.
+// Fecha: 16/03/2026
+// Archivo factory_algoritmos_planificacion.h: fichero de declaración.
 // Contiene la declaración de la clase FactoryAlgoritmosPlanificacion.
 
-#ifndef FACTORY_ALGORIMTO_PLANIFICACION_H_
-#define FACTORY_ALGORIMTO_PLANIFICACION_H_
+#ifndef FACTORY_ALGORITMOS_PLANIFICACION_H_
+#define FACTORY_ALGORITMOS_PLANIFICACION_H_
 
 #include "../lib/algoritmo.h"
+#include <nlohmann/json.hpp>
+
+using json = nlohmann::json;
 
 class FactoryAlgoritmosPlanificacion {
  public:
   virtual ~FactoryAlgoritmosPlanificacion() = default;
-
-  virtual Algoritmo* GenerarAlgoritmoPlanificacion() = 0;
+  virtual Algoritmo* Crear(const json& config) = 0;
 };
 
 #endif

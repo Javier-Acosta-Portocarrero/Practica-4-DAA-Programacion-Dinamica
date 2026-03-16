@@ -17,14 +17,16 @@
 #include "planificacion_empleados/algoritmo_aproximado_planificacion.h"
 #include "planificacion_empleados/algoritmo_voraz_planificacion_dia.h"
 #include "planificacion_empleados/algoritmo_dinamico_planificacion_dia.h"
-#include "planificacion_empleados/factory_algoritmo_planificacion_json.h"
+#include "planificacion_empleados/factory_algoritmos_planificacion.h"
 #include "planificacion_empleados/generador_instancias_planificacion.h"
 #include "planificacion_empleados/algoritmo_intercambios_planificacion_dia.h"
+#include "planificacion_empleados/selector_factory_algoritmo.h"
 
 #include <iostream>
 #include <random>
 #include <ctime>
 #include <chrono>
+#include <fstream>
 
 
 int main() {
@@ -47,7 +49,7 @@ int main() {
       size_t cantidad_iter{5};
       for (size_t iter{0}; iter < cantidad_iter; ++iter) {
         InstanciaPlanificacionEmpleados* instancia = generador.GenerarInstancia(empleados, dia, turnos);
-        planificador.SetEstrategia(new AlgoritmoAproximadoPlanificacion(new AlgoritmoIntercambiosPlanificacionDia, 1, 2));
+        planificador.SetEstrategia(new AlgoritmoAproximadoPlanificacion(new AlgoritmoDinamicoPlanificacionDia, 1, 2));
         auto inicio = std::chrono::high_resolution_clock::now();
         SolucionPlanificacionEmpleados* solucion_dinamica = planificador.Planificar(instancia);
         auto fin = std::chrono::high_resolution_clock::now();
@@ -86,9 +88,16 @@ int main() {
     CargaInstanciaPlanificacion* carga_instancias = new CargaInstanciaPlanificacionJson(ruta_fichero_instancia);
     InstanciaPlanificacionEmpleados* entrada = carga_instancias->Load();
 
-    FactoryAlgoritmosPlanificacion* factory = new FactoryAlgoritmosPlanificacionJson(ruta_fichero_algoritmo);
-    Algoritmo* estrategia_planificacion = factory->GenerarAlgoritmoPlanificacion();
+    std::ifstream flujo_json(ruta_fichero_algoritmo);
+    json config;
+    flujo_json >> config;
+
+    SelectorFactoryAlgoritmo selector;
+    FactoryAlgoritmosPlanificacion* factory = selector.Seleccionar(config);
+    Algoritmo* estrategia_planificacion = factory->Crear(config);
     PlanificadorEmpleados planificador(estrategia_planificacion);
+    
+    delete factory;
 
     SolucionPlanificacionEmpleados* solucion = planificador.Planificar(entrada);
 
