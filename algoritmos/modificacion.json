@@ -1,0 +1,9 @@
+{
+	"class": "newAlgorithm",
+	"initialSolver": {
+		"class": "BinaryDivideAndConquer",
+		"smallSolver": {
+			"class": "DynamicProgramming"
+		}
+	}
+}

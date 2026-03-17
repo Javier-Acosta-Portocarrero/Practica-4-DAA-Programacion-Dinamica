@@ -14,6 +14,7 @@
 #include "factory_algoritmo_dinamico.h"
 #include "factory_divide_y_venceras.h"
 #include "factory_divide_y_venceras_binario.h"
+#include "factory_new_algorithm.h"
 
 FactoryAlgoritmosPlanificacion* SelectorFactoryAlgoritmo::Seleccionar(const json& config) {
 
@@ -30,6 +31,10 @@ FactoryAlgoritmosPlanificacion* SelectorFactoryAlgoritmo::Seleccionar(const json
 
   if (tipo == "BinaryDivideAndConquer")
     return new FactoryDivideYVencerasBinario(this);
+  
+  if (tipo == "newAlgorithm") {
+    return new FactoryNewAlgorithm(this);
+  }
 
   throw std::runtime_error("Algoritmo no soportado: " + tipo);
 }
