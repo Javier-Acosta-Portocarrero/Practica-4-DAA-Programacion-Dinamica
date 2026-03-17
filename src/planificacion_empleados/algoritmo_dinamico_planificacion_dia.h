@@ -3,10 +3,9 @@
 // Grado en Ingenieria Informatica
 // Asignatura: Diseño y Analisis de Algoritmos
 // Curso: 3º
-// Practica 2: Máquina RAM
+// Practica 4: Programación dinámica
 // Autor: Javier Acosta Portocarrero
-// Autor: Gabriel Gallardo Noda
-// Fecha: 07/03/2026
+// Fecha: 17/03/2026
 // Archivo algoritmo_voraz_planificacion_dia.h: fichero de declaración.
 // Contiene la declaración de la clase AlgoritmoVorazPlanificacionDia.
 

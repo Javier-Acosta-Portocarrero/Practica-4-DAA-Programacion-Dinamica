@@ -3,10 +3,9 @@
 // Grado en Ingenieria Informatica
 // Asignatura: Diseño y Analisis de Algoritmos
 // Curso: 3º
-// Practica 2: Máquina RAM
+// Practica 4: Programación dinámica
 // Autor: Javier Acosta Portocarrero
-// Autor: Gabriel Gallardo Noda
-// Fecha: 07/03/2026
+// Fecha: 17/03/2026
 // Archivo algoritmo_voraz_planificacion_dia.cc: fichero de definicion.
 // Contiene la definicion de la clase AlgoritmoVorazPlanificacionDia.
 
@@ -94,6 +93,7 @@ void AlgoritmoDinamicoPlanificacionDia::ReconstuirSolucion(
 
   size_t cantidad_empleados_actual = tabla.size() - 1;
   size_t slot_actual = tabla[0].size() - 1;
+  // Se parte de la solución final y se va determinando qué empleado se asignó a cada slot.
   while (cantidad_empleados_actual > 0 && slot_actual > 0) {
     if (tabla[cantidad_empleados_actual][slot_actual] != tabla[cantidad_empleados_actual - 1][slot_actual]) {
       unsigned turno_slot = TraducirSlotTurno(slot_actual - 1, solucion);
